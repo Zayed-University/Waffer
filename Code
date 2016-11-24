@@ -1,0 +1,26 @@
+ int ledPin = 13;
+int buttonPin = 6;
+int motion = 0;
+
+void setup() {
+ Serial.begin(9600);
+ pinMode(ledPin, OUTPUT);
+ pinMode(buttonPin, INPUT);
+ 
+}
+
+void loop() {
+ {
+  for (int motion=0; motion <= 255; motion++)
+     // digitalWrite(motion, buttonPin);
+      delay(10);
+      
+ motion  = analogRead(2);
+ Serial.println(motion);
+ 
+motion = digitalRead(buttonPin);
+digitalWrite(ledPin, motion);
+
+
+}
+}
